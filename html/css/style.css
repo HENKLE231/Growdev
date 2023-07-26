@@ -1,0 +1,56 @@
+html {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    /* background-color: azure; */
+    background: url(../imgs/bg.png) no-repeat left top;
+    background-size: cover;
+}
+
+header {
+    /* background-color: black;
+    color: white; */
+    font-size: 20px;
+    padding: 20;
+}
+
+h1 {
+    text-align: center;
+}
+
+main {
+    padding: 0 20px;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 20px;
+    padding: 20px;
+}
+
+#titulo-1 {
+    color: #333333;
+}
+
+.paragrafo {
+    font-size: 20px;
+}
+
+.table, th, tr, td {
+    width: 500px;
+    border: solid #333333;
+}
+
+.fundo-branco {
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 20px;
+    margin: 20px;
+}

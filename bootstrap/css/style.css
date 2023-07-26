@@ -1,0 +1,36 @@
+html {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+.bg-city {
+    background: url("../imgs/bg-city-re.jpg") no-repeat fixed;
+    background-size: cover;
+
+}
+
+.penumbra {
+    background: #ffffff77;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: -1;
+}
+
+#growdev-logo {
+    margin: 20px;
+    width: 100%;
+    max-width: 400px;
+}
+
+.container {
+    padding-bottom: 20px;
+}
+
+#nav-form {
+    display: flex;
+}
+#nav-form > input {
+    margin-right: 10px;
+}

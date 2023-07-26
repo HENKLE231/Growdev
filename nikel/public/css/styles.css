@@ -1,0 +1,122 @@
+html {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+.color-primary {
+    color: #4c0070;
+}
+
+.color-secondary {
+    color: #4c79d3;
+}
+
+#login {
+    background: linear-gradient(120deg, #4c79d3 44.9%, #fff 45%) no-repeat fixed;
+}
+
+.text-login {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.coins {
+    position: relative;
+    bottom: -150px;
+}
+
+.button-login {
+    border-radius: 10px;
+    background-color: #4e0070;
+    color: #fff;
+    width: 50%;
+    margin: 0 25%;
+}
+
+.button-login:hover, .button-default:hover {
+    background-color: #4c79d3;
+    color: #fff;
+}
+
+.link-default {
+    color: #4c0070;
+    cursor: pointer;
+}
+
+.link-default:hover {
+    color: #4c79d3;
+}
+
+/* APP */
+#app {
+    background: linear-gradient(120deg, #fff 44.9%, #4c79d3 45%) no-repeat fixed;
+}
+
+header {
+    border-bottom: 1px solid #bebcbc;
+    padding: 5px;
+    background-color: #fff;
+}
+
+.icon-detail {
+    font-size: 50px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.info {
+    background-color: #fff;
+    border-radius: 20px 20px 0 0;
+    padding: 20px 0 0 0;
+}
+
+.button-default {
+    border-radius: 10px;
+    background-color: #4c0070;
+    color: #fff;
+}
+
+.button-cancel {
+    border-radius: 10px;
+}
+
+.button-float {
+    border-radius: 50%;
+    border: 2px solid #4e0070;
+    position: fixed;
+    bottom: 1rem;
+    right: 2rem;
+    font-size: 35px;
+    background-color: #4e0070;
+    color: #fff;
+}
+
+.button-float:hover {
+    border: 2px solid #4c79d3;
+    background-color: #fff;
+    color: #4c79d3;
+}
+
+.logout {
+    min-width: 5rem;
+}
+
+.menu {
+    margin-right: 20px;
+}
+
+.crud-button {
+    color: #4c0070;
+    font-size: 22px;
+}
+
+.crud-button:hover {
+    color: #4c79d3;
+}
+
+#transactions-list > tr > td, #transactions-list > tr > th {
+    padding: 5px;
+    line-height: 35px;
+}

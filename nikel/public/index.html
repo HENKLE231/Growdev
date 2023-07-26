@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nikel</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body id="login">
+    <main>
+        <div class="container">
+            <div class="row vh-100">
+                <div class="col d-flex justify-content-center my-5 flex-column">
+                    <div class="text-login">
+                        <p>Organize suas finanças de forma fácil.</p>
+                        <p>Controle seu dinheiro e investimentos.</p>
+                        <p>Economize e atinja seus objetivos.</p>
+                    </div>
+                    <div class="text-center">
+                        <img src="assets/images/pocket.png" alt="Pocket icon" class="img-fluid">
+                        <img src="assets/images/coins.png" alt="Moedas" class="img-fluid d-none  d-xl-inline coins">
+                    </div>
+                </div>
+                <div class="col d-flex justify-content-center my-5 flex-column">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col">
+                                <div class="text-center mb-3">
+                                    <img src="assets/images/nikel-logo.png" alt="Logo Nikel">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <form id="login-form">
+                                <div class="form-group">
+                                    <label for="login-email">E-mail:</label>
+                                    <input type="email" class="form-control" id="login-email" aria-describedby="emailHelp">
+                                    <small id="emailHelp" class="form-text text-muted">Utilize seu e-mail para realizar seu login.</small>
+                                </div>
+                                <div class="form-group">
+                                    <label for="login-password">Senha:</label>
+                                    <input type="password" class="form-control" id="login-password">
+                                </div>
+                                <div class="form-check">
+                                    <input type="checkbox" class="form-check-input" id="login-session-check">
+                                    <label class="form-check-label" for="login-session-check">Permanecer conectado.</label>
+                                </div>
+                                <button type="submit" class="btn button-login mt-2">Entrar</button>
+                            </form>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <p class="text-center mt-2 form-text" data-bs-toggle="modal" data-bs-target="#register-modal">
+                                    Ainda não tem conta?
+                                    <span class="link-default">Criar uma conta.</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row text-center mt-5">
+                            <div class="col">
+                                <img src="assets/images/codai-logo.png" alt="Logo Codaí">
+                            </div>
+                        </div>
+                        <div class="row text-center">
+                            <div class="col">
+                                <img src="assets/images/growdev-logo.png" alt="Logo Growdev">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal" tabindex="-1" id="register-modal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Crie sua conta</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <form id="register-form">
+                        <div class="modal-body">
+                            <div class="form-group">
+                                <label for="register-email">E-mail:</label>
+                                <input type="email" class="form-control" id="register-email" aria-describedby="emailHelp" required>
+                                <small id="emailHelp" class="form-text text-muted">Utilize seu e-mail para criar a conta.</small>
+                            </div>
+                            <div class="form-group">
+                                <label for="register-password">Senha:</label>
+                                <input type="password" class="form-control" id="register-password" aria-describedby="passwordHelp" required>
+                                <small id="passwordHelp" class="form-text text-muted">Utilize uma senha fácil de lembrar e anote para não esquecer.</small>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn btn-secondary button-cancel" data-bs-dismiss="modal">Cancelar</button>
+                            <button type="submit" class="btn button-default">Criar conta</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>
