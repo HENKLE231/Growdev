@@ -65,10 +65,10 @@ function saveData(data) {
 function getTransactions() {
     let transactions = data.transactions;
     let transactionsHtml = '';
-    let index = 0;
 
     if (transactions.length) {
-        transactions.forEach((item) => {
+        for (let i = 0; i < transactions.length; i++) {
+            let item = transactions[i];
             let type = "Entrada";
 
             if (item.type == "2") {
@@ -76,7 +76,7 @@ function getTransactions() {
             }
 
             transactionsHtml +=
-            '<tr onclick="selectRecord(' + index + ')">' +
+            '<tr onclick="selectRecord(' + i + ')">' +
                 '<th scope="row">' + item.date + '</th>' +
                 '<td>' + item.value.toFixed(2) + '</td>' +
                 '<td>' + type + '</td>' +
@@ -85,28 +85,32 @@ function getTransactions() {
                     '<i class="bi bi-trash"></i>' +
                 '</button><td>' +
             '</tr>'
-
-            index ++;
-        });
+        }
 
         document.getElementById("transactions-list").innerHTML = transactionsHtml;
     }
 }
 
 function selectRecord(index) {
-    document.getElementById('record-selected').value = index;
+    document.getElementById('selected-record').value = index;
 }
 
 // Excluir lançamento
 document.getElementById("deletion-form").addEventListener("submit", (e) => {
     e.preventDefault();
 
-    let deletion_target = document.getElementById("selected-record").value;
+    const dataUser = localStorage.getItem(logged);
+    if (dataUser) {
+        data = JSON.parse(dataUser);
+    }
 
-    const removed_item = data.transactions.splice(deletion_target, 1);
+    let deletion_target = document.getElementById("selected-record").value;
+    data.transactions.splice(deletion_target, 1);
+
+
+    console.log(data);
 
     saveData(data);
-    e.target.reset();
     deletionModal.hide();
     
     getTransactions();
