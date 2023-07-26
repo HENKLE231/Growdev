@@ -67,6 +67,7 @@
                                             <th scope="col">Valor</th>
                                             <th scope="col">Tipo</th>
                                             <th scope="col">Descrição</th>
+                                            <th scope="col">Excluir</th>
                                         </tr>
                                     </thead>
                                     <tbody id="transactions-list"></tbody>
@@ -114,6 +115,29 @@
                         <div class="modal-footer">
                             <button class="btn btn-secondary button-cancel" data-bs-dismiss="modal">Cancelar</button>
                             <button type="submit" class="btn button-default">Adicionar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal" tabindex="-1" id="deletion-modal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Excluir Lançamento</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <form id="deletion-form">
+                        <div class="modal-body">
+                            <div class="form-group">
+                                <p>O lançamento será exluido permanentemente, você tem certeza que deseja fazer isso.</p>
+                            </div>
+                            <input type="hidden" id="selected-record">
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn btn-secondary button-cancel" data-bs-dismiss="modal">Cancelar</button>
+                            <button type="submit" class="btn button-default">Excluir</button>
                         </div>
                     </form>
                 </div>

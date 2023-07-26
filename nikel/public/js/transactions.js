@@ -1,4 +1,5 @@
 const myModal = new bootstrap.Modal("#transaction-modal");
+const deletionModal = new bootstrap.Modal("#deletion-modal");
 let logged = sessionStorage.getItem("logged");
 const session = localStorage.getItem("session");
 let data = {
@@ -25,12 +26,14 @@ function checkLogin() {
     getTransactions();
 }
 
+// Logout
 document.getElementById("button-logout").addEventListener("click", () => {
     sessionStorage.removeItem("logged");
     localStorage.removeItem("session");
     window.location.href = "index.html";
 });
 
+// Adicionar lançamento
 document.getElementById("transaction-form").addEventListener("submit", (e) => {
     e.preventDefault();
 
@@ -62,6 +65,7 @@ function saveData(data) {
 function getTransactions() {
     let transactions = data.transactions;
     let transactionsHtml = '';
+    let index = 0;
 
     if (transactions.length) {
         transactions.forEach((item) => {
@@ -72,14 +76,40 @@ function getTransactions() {
             }
 
             transactionsHtml +=
-            '<tr>' +
+            '<tr onclick="selectRecord(' + index + ')">' +
                 '<th scope="row">' + item.date + '</th>' +
                 '<td>' + item.value.toFixed(2) + '</td>' +
                 '<td>' + type + '</td>' +
                 '<td>' + item.description + '</td>' +
+                '<td><button class="btn basic-transition" type="button" data-bs-target="#deletion-modal" data-bs-toggle="modal">' +
+                    '<i class="bi bi-trash"></i>' +
+                '</button><td>' +
             '</tr>'
+
+            index ++;
         });
 
         document.getElementById("transactions-list").innerHTML = transactionsHtml;
     }
 }
+
+function selectRecord(index) {
+    document.getElementById('record-selected').value = index;
+}
+
+// Excluir lançamento
+document.getElementById("deletion-form").addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    let deletion_target = document.getElementById("selected-record").value;
+
+    const removed_item = data.transactions.splice(deletion_target, 1);
+
+    saveData(data);
+    e.target.reset();
+    deletionModal.hide();
+    
+    getTransactions();
+
+    alert("Lançamento excluído com sucesso!");
+});

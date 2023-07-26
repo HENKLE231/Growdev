@@ -120,3 +120,11 @@ header {
     padding: 5px;
     line-height: 35px;
 }
+
+.basic-transition {
+    color: #4e0070;
+}
+
+.basic-transition:hover {
+    color: #4c79d3;
+}
